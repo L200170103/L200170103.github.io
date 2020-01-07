@@ -86,24 +86,24 @@
       </p>
     </div>
     <div class="col"> 
-      <p> <b> Full Text Searching
+      <p> <b>1. Full Text Searching  </b> <br/>
         Salah satu metode yang dapat digunakan untuk melakukan proses pencarian adalah dengan memanfaatkan fungsi indexing pada database. Full Text Searching  merupakan proses pencarian data  pada database  MySQL.
-        Sebelum mengenal lebih jauh mengenai Full Text Searching ada beberapa hal (prasyarat) yang perlu diketahui bersama :
-        a. Full Text Searching mengacu pada fungsionalitas yang terdapat pada database MySQL;
-        b. Full text index pada MySQL adalah index dengan tipe FULLTEXT;
-        c. Full text index hanya dapat digunakan pada database MyISAM dan dapat digunakan untuk kolom dengan tipe CHAR, VARCHAR, atau TEXT;
-        d. Full text index dapat dibuat saat proses pembuatan tabel dengan perintah “CREATE TABLE” atau saat perubahan struktur table yang sudah ada dengan menggunakan perintah “ALTER TABLE” atau “CREATE INDEX”.
+        Sebelum mengenal lebih jauh mengenai Full Text Searching ada beberapa hal (prasyarat) yang perlu diketahui bersama : <br/>
+        a. Full Text Searching mengacu pada fungsionalitas yang terdapat pada database MySQL; <br/>
+        b. Full text index pada MySQL adalah index dengan tipe FULLTEXT;  <br/>
+        c. Full text index hanya dapat digunakan pada database MyISAM dan dapat digunakan untuk kolom dengan tipe CHAR, VARCHAR, atau TEXT; <br/>
+        d. Full text index dapat dibuat saat proses pembuatan tabel dengan perintah “CREATE TABLE” atau saat perubahan struktur table yang sudah ada dengan menggunakan perintah “ALTER TABLE” atau “CREATE INDEX”. <br/>
         
-        Skenario
-        Tulisan ini menggunakan tabel article sebagai contoh untuk menggambarkan penggunaan Full-text Searching di database MySQL, adapun struktur tabel article yang digunakan adalah sebagai berikut :
-        CREATE TABLE IF NOT EXIST artivle (id int(10) NOT NULL AUTO_INCREMENT, title varchar(150) NOT NULL, body text NOT NULL, PRIMARY KEY(id)) ENGINE=MyISLAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+        Skenario  <br/>
+        Tulisan ini menggunakan tabel article sebagai contoh untuk menggambarkan penggunaan Full-text Searching di database MySQL, adapun struktur tabel article yang digunakan adalah sebagai berikut : <br/>
+        CREATE TABLE IF NOT EXIST artivle (id int(10) NOT NULL AUTO_INCREMENT, title varchar(150) NOT NULL, body text NOT NULL, PRIMARY KEY(id)) ENGINE=MyISLAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;  <br/>
       
-        Implementasi
-        Full--‐Text Searching dapat menjadi pilihan untuk melakukan fungsi pencarian pada
-        database MySQL. Syarat untuk dapat menjalankan fungsi Full--‐Text Searching adalah dengan menambahkan index dengan tipe FULLTEXT pada field yang ingin dicari. Berikut perintah untuk menambahkan Full-Text Indexing  pada field title dan body pada tabel article :
+        Implementasi  <br/>
+        Full--‐Text Searching dapat menjadi pilihan untuk melakukan fungsi pencarian pada  <br/>
+        database MySQL. Syarat untuk dapat menjalankan fungsi Full--‐Text Searching adalah dengan menambahkan index dengan tipe FULLTEXT pada field yang ingin dicari. Berikut perintah untuk menambahkan Full-Text Indexing  pada field title dan body pada tabel article :  <br/>
         
-        ALTER TABLE article ADD FULLTEXT(title)
-        ALTER TABLE article ADD FULLTEXT(body,title)
+        ALTER TABLE article ADD FULLTEXT(title)  <br/>
+        ALTER TABLE article ADD FULLTEXT(body,title)  <br/>
 
 
 
