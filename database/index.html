@@ -62,12 +62,8 @@
         Perintah yang digunakan untuk merubah nama Objek <br/>
         d. DROP
         Perintah ini digunakan untuk menghapus database dan tabel.
-
-
-      </p>
-    </div>
-    <div class="col"> 
-      <p> <b> 2.DML (Data Manipulation Language) </b><br/>
+        
+        2.DML (Data Manipulation Language) </b><br/>
           DML merupakan perintah SQL yang digunakan untuk proses pengolahan isi data di dalam table seperti memasukkan, merubah dan menghapus isi data. dan tidak terkait dengan perubahan struktur dan definisi tipe data dari objek database.
 
           Perintah SQL yang termasuk dalam DML antara lain : <br/>
@@ -85,6 +81,30 @@
           Perintah ini digunakan untuk menghapus data dari tabel. Biasanya data yang dihapus adalah data yang tidak diperlukan lagi. Pada saat menghapus data, perintah yang telah dijalankan tidak dapat digagalkan, sehingga data yang telah hilang tidak dapat dikembalikan lagi.
 
         
+
+
+      </p>
+    </div>
+    <div class="col"> 
+      <p> <b> Full Text Searching
+        Salah satu metode yang dapat digunakan untuk melakukan proses pencarian adalah dengan memanfaatkan fungsi indexing pada database. Full Text Searching  merupakan proses pencarian data  pada database  MySQL.
+        Sebelum mengenal lebih jauh mengenai Full Text Searching ada beberapa hal (prasyarat) yang perlu diketahui bersama :
+        a. Full Text Searching mengacu pada fungsionalitas yang terdapat pada database MySQL;
+        b. Full text index pada MySQL adalah index dengan tipe FULLTEXT;
+        c. Full text index hanya dapat digunakan pada database MyISAM dan dapat digunakan untuk kolom dengan tipe CHAR, VARCHAR, atau TEXT;
+        d. Full text index dapat dibuat saat proses pembuatan tabel dengan perintah “CREATE TABLE” atau saat perubahan struktur table yang sudah ada dengan menggunakan perintah “ALTER TABLE” atau “CREATE INDEX”.
+        
+        Skenario
+        Tulisan ini menggunakan tabel article sebagai contoh untuk menggambarkan penggunaan Full-text Searching di database MySQL, adapun struktur tabel article yang digunakan adalah sebagai berikut :
+        CREATE TABLE IF NOT EXIST artivle (id int(10) NOT NULL AUTO_INCREMENT, title varchar(150) NOT NULL, body text NOT NULL, PRIMARY KEY(id)) ENGINE=MyISLAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+      
+        Implementasi
+        Full--‐Text Searching dapat menjadi pilihan untuk melakukan fungsi pencarian pada
+        database MySQL. Syarat untuk dapat menjalankan fungsi Full--‐Text Searching adalah dengan menambahkan index dengan tipe FULLTEXT pada field yang ingin dicari. Berikut perintah untuk menambahkan Full-Text Indexing  pada field title dan body pada tabel article :
+        
+        ALTER TABLE article ADD FULLTEXT(title)
+        ALTER TABLE article ADD FULLTEXT(body,title)
+
 
 
 
