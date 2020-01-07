@@ -61,9 +61,9 @@
         c. RENAME
         Perintah yang digunakan untuk merubah nama Objek <br/>
         d. DROP
-        Perintah ini digunakan untuk menghapus database dan tabel.
+        Perintah ini digunakan untuk menghapus database dan tabel. <br/>
         
-        2.DML (Data Manipulation Language) </b><br/>
+       <b> 2.DML (Data Manipulation Language) </b><br/>
           DML merupakan perintah SQL yang digunakan untuk proses pengolahan isi data di dalam table seperti memasukkan, merubah dan menghapus isi data. dan tidak terkait dengan perubahan struktur dan definisi tipe data dari objek database.
 
           Perintah SQL yang termasuk dalam DML antara lain : <br/>
@@ -87,30 +87,28 @@
       </p>
     </div>
     <div class="col"> 
-      <p> <b> 2.Full Text Searching </b><br/>
+      <p> <b> 3.Full Text Searching </b><br/>
           Full Text Searching merupakan proses pencarian data pada database Mysql.
 
-          Cara Mengaktifkan fasilitas fulltext-search antara lain : <br/>
+          A. Cara Mengaktifkan fasilitas fulltext-search antara lain : <br/>
 
-          a.CREATE TABLE post (
+          1.CREATE TABLE post (
             id int(4) NOT NULL AUTO_INCREMENT, <br/>
             title varchar(255) NOT NULL, <br/>
             post_content text, <br/>
             PRIMARY KEY (id), <br/>
             FULLTEXT KEY post_content (post_content) ); <br/>
             
-          Modifikasi tabel yang sudah ada dengan perintah ALTER TABLE.<br/>
+          B. Modifikasi tabel yang sudah ada dengan perintah ALTER TABLE.<br/>
 
-          a.ALTER TABLE products
-          perintah ini digunakan untuk menyisipkan atau memasukkan data baru ke dalam tabel. Penggunaannya setelah database dan tabel selesai dibuat. <br/>
-
-          b.ADD FULLTEXT(productDescription,productline)
-          menambahkan fasilitas fulltext serach pada table products untuk kolom productsDescription,productLine. <br/>
-           
-         Membuat index dengan perintah "Create Fulltext index ..." <br/>
+          1.ALTER TABLE products <br/>
+          2.ADD FULLTEXT(productDescription,productline) <br/>
+           menambahkan fasilitas fulltext serach pada table products untuk kolom productsDescription,productLine. <br/>
+  
+          C. Membuat index dengan perintah "Create Fulltext index ..." <br/>
         
-          a.CREATE FULLTEXT INDEX address <br/>
-          b. ON offices(addressLine1, addressLine2) <br/>
+          1.CREATE FULLTEXT INDEX address <br/>
+          2. ON offices(addressLine1, addressLine2) <br/>
 
 
 
