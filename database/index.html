@@ -43,7 +43,7 @@
 <div class="container" >
   <div class="row" >
     <div class= "col">
-      <h1> Daftar Perintah SQL berdasarkan DDL dan DML </h1>
+      <h1> Daftar Perintah SQL berdasarkan DDL dan DML dan FULL TEXT SEARCHING</h1>
 
     </div>
 
@@ -86,17 +86,8 @@
       </p>
     </div>
     <div class="col"> 
-      <p> <b>1. Full Text Searching  </b> <br/>
+      <p> <b> 1. Full Text Searching  </b> <br/>
         Salah satu metode yang dapat digunakan untuk melakukan proses pencarian adalah dengan memanfaatkan fungsi indexing pada database. Full Text Searching  merupakan proses pencarian data  pada database  MySQL.
-        Sebelum mengenal lebih jauh mengenai Full Text Searching ada beberapa hal (prasyarat) yang perlu diketahui bersama : <br/>
-        
-        a. Full Text Searching mengacu pada fungsionalitas yang terdapat pada database MySQL; <br/>
-        
-        b. Full text index pada MySQL adalah index dengan tipe FULLTEXT;  <br/>
-        
-        c. Full text index hanya dapat digunakan pada database MyISAM dan dapat digunakan untuk kolom dengan tipe CHAR, VARCHAR, atau TEXT; <br/>
-        
-        d. Full text index dapat dibuat saat proses pembuatan tabel dengan perintah “CREATE TABLE” atau saat perubahan struktur table yang sudah ada dengan menggunakan perintah “ALTER TABLE” atau “CREATE INDEX”. <br/>
         
         Skenario  <br/>
         
@@ -105,7 +96,7 @@
       
         Implementasi  <br/>
         
-        Full--‐Text Searching dapat menjadi pilihan untuk melakukan fungsi pencarian pada  <br/>
+        Full Text Searching dapat menjadi pilihan untuk melakukan fungsi pencarian pada  <br/>
         
         database MySQL. Syarat untuk dapat menjalankan fungsi Full--‐Text Searching adalah dengan menambahkan index dengan tipe FULLTEXT pada field yang ingin dicari. Berikut perintah untuk menambahkan Full-Text Indexing  pada field title dan body pada tabel article :  <br/>
         
